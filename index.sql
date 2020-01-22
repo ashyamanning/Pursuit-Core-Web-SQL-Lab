@@ -151,3 +151,26 @@ Exercise 16
 – Version A number (floating point) of the latest version of this database
 – Download_count An integer count of the number of times this database was downloaded
 This table has no constraints.
+    CREATE TABLE Database (
+        Name TEXT,
+        Version INTEGER FLOAT,
+        Download_count INTEGER
+    );
+
+
+Exercise 17
+1. Add a column named Aspect_ratio with a FLOAT data type to store the aspect-ratio each movie was released in.
+    ALTER TABLE movies 
+    ADD column Aspect_ratio
+    DEFAULT FLOAT;
+2. Add another column named Language with a TEXT data type to store the language that the movie was released in. Ensure that the default for this language is English.
+    ALTER TABLE movies
+    ADD column Language TEXT
+    DEFAULT english;
+
+
+Exercise 18
+1. We have sadly reached the end of our lessons, lets clean up by removing the Movies table
+    DROP TABLE IF EXISTS movies
+2. And drop the BoxOffice table as well
+    DROP TABLE IF EXISTS boxoffice
